@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   updatePost(id, text) {
-    axios.put(`https://practiceapi.devmountain.com/api/posts?id=${id}`, { text })
+    axios.put(`https://practiceapi.devmountain.com/api/posts?id=${id}`, { text:text })
       .then((response) => {
         console.log('put response', response)
         this.setState({ posts: response.data })
